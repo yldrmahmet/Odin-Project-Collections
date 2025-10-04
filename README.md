@@ -1,5 +1,3 @@
 # Odin-Project-Collections
 
-Hello Odin!
-
-1. Git Basics
+You can visit https://yldrmahmet.github.io/Odin-Project-Collections/
