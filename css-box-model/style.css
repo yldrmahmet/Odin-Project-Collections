@@ -1,0 +1,23 @@
+* {
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.content-box-example {
+  width: 500px;
+  height: 500px;
+  background-color: orange;
+  box-sizing: border-box;
+  padding: 50px;
+  border: 30px solid red;
+}
+
+.border-box-example {
+  width: 500px;
+  height: 500px;
+  background-color: aqua;
+  box-sizing: content-box;
+  padding: 50px;
+  border: 30px solid red;
+}
