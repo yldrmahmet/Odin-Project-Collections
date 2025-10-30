@@ -83,13 +83,12 @@ const playGame = () => {
     playRound(getHumanChoice(), getComputerChoice());
     i++;
   }
-  console.log();
-  console.log();
   console.log("******************************");
-  console.log();
   console.log(`you: ${humanScore} pc: ${computerScore}`);
   if (humanScore > computerScore) console.log("congrats you are the best");
-  else console.log("computers are amazing");
+  if (computerScore > humanScore)
+    console.log("computers are amazing, you lose");
+  else console.log("this round has no winner. you should try again");
 };
 
 let humanScore = 0;
