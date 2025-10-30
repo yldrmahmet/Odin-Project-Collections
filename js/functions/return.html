@@ -41,6 +41,11 @@
       return num;
     }
 
+    function squareRoot(num) {
+      if (num < 0) return undefined;
+      if (num === 0) return 0;
+      return num ** 0.5;
+    }
 
     input.addEventListener("change", () => {
       const num = parseFloat(input.value);
@@ -50,6 +55,7 @@
         para.textContent = `${num} squared is ${squared(num)}. `;
         para.textContent += `${num} cubed is ${cubed(num)}. `;
         para.textContent += `${num} factorial is ${factorial(num)}. `;
+        para.textContent += `${num} square root is ${squareRoot(num)}. `
       }
     });
 
