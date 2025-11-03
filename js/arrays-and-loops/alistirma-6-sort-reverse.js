@@ -36,7 +36,7 @@ console.log("DİKKAT: Orijinal dizi değişti!\n");
 // renkler dizisini ters çevir AMA ORİJİNALİ KORU!
 let renkler = ["kırmızı", "mavi", "yeşil"];
 // KODUNU BURAYA YAZ
-let tersRenkler = renkler.reversse();
+let tersRenkler = [...renkler].reverse();
 // [...renkler].reverse() veya renkler.slice().reverse()
 console.log("Soru 2 - Orijinal:", renkler);
 console.log("Soru 2 - Ters:", tersRenkler);
@@ -202,9 +202,8 @@ let people = [
   { name: "Ayşe", age: 20 },
 ];
 // KODUNU BURAYA YAZ
-// İpucu:
-// if (a.age !== b.age) return a.age - b.age;
-// return a.name.localeCompare(b.name);
+if (a.age !== b.age) return a.age - b.age;
+return a.name.localeCompare(b.name);
 
 console.log("Challenge 3 - Çoklu sıralama:", people);
 console.log("Beklenen: Ayşe(20), Ali(25), Zeynep(25), Mehmet(30)");
@@ -214,7 +213,7 @@ console.log("(Önce yaş, sonra isim)\n");
 // Kelimeleri uzunluklarına göre sırala (kısadan uzuna)
 let words = ["elma", "muz", "çilek", "üzüm", "portakal"];
 // KODUNU BURAYA YAZ
-// İpucu: words.sort((a, b) => a.length - b.length)
+words.sort((a, b) => a.length - b.length);
 
 console.log("Challenge 4 - Uzunluğa göre:", words);
 console.log("Beklenen: muz(3), elma(4), üzüm(4), çilek(5), portakal(8)\n");
@@ -223,7 +222,7 @@ console.log("Beklenen: muz(3), elma(4), üzüm(4), çilek(5), portakal(8)\n");
 // Kelimeleri SON harflerine göre alfabetik sırala
 let sehirler = ["İstanbul", "Ankara", "İzmir", "Bursa"];
 // KODUNU BURAYA YAZ
-// İpucu: a[a.length - 1].localeCompare(b[b.length - 1])
+sehirler.sort((a, b) => a[a.length - 1].localeCompare(b[b.length - 1]));
 
 console.log("Challenge 5 - Son harfe göre:", sehirler);
 console.log("Beklenen: Ankara(a), Bursa(a), İstanbul(l), İzmir(r)\n");
@@ -239,6 +238,13 @@ let students = [
 // İpucu:
 // 1. Önce her öğrencinin ortalamasını hesapla
 // 2. Ortalamalara göre sırala
+const ort = students.map((student) => {
+  let toplam = 0;
+  student.grades.map((grade) => {
+    toplam += grade;
+  });
+  return toplam;
+});
 
 console.log("Challenge 6 - Ortalamaya göre sıralı:");
 students.forEach((s) => {
