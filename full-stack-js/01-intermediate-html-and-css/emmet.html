@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--
+    Emmet is a plugin, built into VS Code, that helps you write HTML and CSS
+    nav>ul>li*3.class-${item $$}
+    -->
+
+    <nav>
+        <ul>
+            <li class="class-1">item 01</li>
+            <li class="class-2">item 02</li>
+            <li class="class-3">item 03</li>
+        </ul>
+    </nav>
+
+    <!--
+    header>nav>ul>li*3^^^main>section*3.section-${section $$$}^^footer>span{footer text}
+    or
+    (header>nav>ul>li*3)+(main>section*3.section-${section $$$})+footer>span{footer text}
+    -->
+
+    <header>
+        <nav>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section-1">section 001</section>
+        <section class="section-2">section 002</section>
+        <section class="section-3">section 003</section>
+    </main>
+    <footer><span>footer text</span></footer>
+
+</body>
+
+</html>
