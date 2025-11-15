@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: aqua;
+  border: 2px solid blue;
+  width: 800px;
+}
+
+.item {
+  background: greenyellow;
+  border: 2px solid green;
+  width: 100px;
+  height: 100px;
+}
+
+.item2 {
+  align-self: flex-start;
+}
+
+.item3 {
+  align-self: flex-end;
+}

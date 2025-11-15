@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>add 7 function</h1>
+    <input id="input" type="number">
+    <button id="button">ADD 7</button>
+    <p id="output"></p>
+
+    <br><br><br>
+
+    <h1>multiply function</h1>
+    <input id="n1" type="number">
+    <input id="n2" type="number">
+    <button id="button2">Multiply</button>
+    <p id="output2"></p>
+
+    <h1>capitalize function</h1>
+    <input id="text" type="text">
+    <button id="button3">Capitalize</button>
+    <p id="output3"></p>
+
+    <script>
+
+        const input = document.getElementById("input");
+        const output = document.getElementById("output");
+        const button = document.getElementById("button");
+
+        button.addEventListener("click", () => {
+            const value = parseInt(input.value);
+            output.innerText = value + 7;
+        })
+
+        const n1 = document.getElementById("n1");
+        const n2 = document.getElementById("n2");
+        const button2 = document.getElementById("button2");
+
+        button2.addEventListener("click", () => {
+            output2.innerText = parseInt(n1.value) * parseInt(n2.value);
+        })
+
+        const text = document.getElementById("text");
+        const button3 = document.getElementById("button3");
+
+        button3.addEventListener("click", () => {
+        })
+
+    </script>
+</body>
+
+</html>

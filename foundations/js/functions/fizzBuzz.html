@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="number">
+    <button>click</button>
+    <p id="para"></p>
+
+    <script>
+        const input = document.querySelector("input");
+        const para = document.getElementById("para");
+        const button = document.querySelector("button");
+        button.addEventListener("click", () => {
+            const value = parseInt(input.value);
+            console.log(value)
+            if (value % 3 == 0) {
+                para.innerText += "Fizz";
+                console.log("a")
+            }
+            if (value % 5 == 0) {
+                para.innerText += "Buzz"
+            }
+            if (value % 3 != 0 && value % 5 != 0) {
+                para.innerText = "";
+            }
+        })
+    </script>
+
+</body>
+
+</html>
